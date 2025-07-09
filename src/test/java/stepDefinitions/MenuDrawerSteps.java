@@ -43,6 +43,11 @@ public class MenuDrawerSteps {
 	public void verify_user_navigate_back_to_login_page() {
 	    assertTrue(menuDrawerPage.verifyBackToLogin());
 	}
+	
+	@Then("Verify user can see About button")
+	public void Verify_user_can_see_About_button() {
+		assertTrue(menuDrawerPage.verifyPrsenceOfAboutButton());
+	}
 
 
 }

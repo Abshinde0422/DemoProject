@@ -28,6 +28,9 @@ public class MenuDrawerPage {
 	 
 	 @FindBy(id = "login-button")
 	 WebElement loginButton;
+	 
+	 @FindBy(id = "about_sidebar_link")
+	 WebElement AboutButton;
 	
 
 	public void clickOnMenuDrawer() throws InterruptedException {
@@ -38,8 +41,6 @@ public class MenuDrawerPage {
 
 	public boolean verifyAllItemButton() {
 		return AllItemIcon.isDisplayed();
-		
-		
 	}
 
 
@@ -61,14 +62,16 @@ public class MenuDrawerPage {
 	
 	public void clickOnLogout() {
 		LogOutButton.click();
-		
 	}
 
 
 	public boolean verifyBackToLogin() {
 		return loginButton.isDisplayed() ;
-		
-		
+		}
+
+
+	public boolean verifyPrsenceOfAboutButton() {
+		return AboutButton.isDisplayed();
 	}
 
 
